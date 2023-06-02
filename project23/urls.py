@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 import csk,rcb
+from india.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('shewage/',shewage,name='shewage'),
     path('csk/',include('csk.urls')),
     path('rcb/',include('rcb.urls')),
 ]
